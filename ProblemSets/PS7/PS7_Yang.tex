@@ -1,0 +1,52 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Problem Set 7}
+\author{Haocheng Yang}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document summarizes and compares the regression results of female wages analysis. And the document also summarizes the progress of my final project.
+\end{abstract}
+
+\section{Missing rate and the Type of Missingness}
+The missing rate of wages dataset is around 0.2512, In my opinion, the type of missing could either be Missing at Random or Missing not at random. The missing value of log wages could be relevant to the observed variables and also could be the result caused by unobserved variables. For example, a female worker with a graduate degree might also be a full-time housewife who does not work in industry, and a female worker who has a number of kids and senior citizen that need to be taken care of might not have a job in a company.
+
+
+\section{The Comparison Among βs}
+The true value of βˆ1 = 0.093, which is different from all of the estimated values obtained from the imputation methods. You can get the information about βs from the table listed on page two \ref{fig:P7}. The pattern we observe is that the estimates from the imputation methods are generally smaller than the true value of βˆ1. 
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{P8.png}
+\caption{\label{fig:P7} The beta comparison table.}
+\end{figure}
+
+Comparing the estimates, we can see that the mean imputation method has lowest of β (β = 0.043***), followed by the multiple imputation method (β = 0.06). and the listwise deletion and missing log as predicted value methods have the same magnitude of βs (β = 0.065* and β = 0.065***, respectively).
+
+
+Mean imputation model gives the most biased value of 0.043, compared with the true beta of 0.093. The assumption for mean imputation is that the missing value is missing at random. If the missing values in our dataset is not missing at random or missing completely at random, the mean imputation model could be biased.
+
+Regarding the estimates for the last two methods, the missing log as predicted value method produces a similar estimate (β = 0.065***) to the listwise deletion method (β = 0.065*). This is expected as both methods involve a form of deletion, either explicitly or implicitly, which may introduce similar biases. The missing log as predicted value method replaces the missing values with predicted values based on a regression model. This method may produce less biased estimates than mean imputation but can still be biased because it relies on a single imputed value.
+
+The multiple imputation method produces a slightly smaller estimate (β = 0.06**) than the other two methods. In my opinion, the multiple imputation method produces a more accurate and sophisticated results. beacuse it creates multiple imputed datasets by modeling the missing data based on observed data. Comparing among the four method, I consider that multiple imputation method generates more reliable correlation.
+
+
+\section{Final Project}
+The utilized model in my final project is OLS regression model. I am more familiar with this model but I might switch the model after we gain more knowledge in machine learning. I using financial data from WRDS database.
+
+
+\end{document}
