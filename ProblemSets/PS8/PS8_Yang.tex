@@ -1,0 +1,36 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{PS8}
+\author{Haocheng Yang}
+
+\begin{document}
+\maketitle
+
+\section{True beta VS Estimated beta}
+
+We utilized four fundamental techniques in this problem set to estimate beta hat in an equation based on a given set of true beta values.
+
+In question 5, we used the matrices generated in Q4 and computed βˆOLS using the closed-form solution. The approach produced a very close estimated beta, compared with the True beta.
+
+In Question 6, We employed the gradient descent technique, which also produced a beta hat value that is close to the actual beta value. This is expected since gradient descent is an optimization algorithm that can be used to minimize the sum of squared errors and find the values of beta that best fit the data.
+
+In Question 7, we employed two distinct techniques, the L-BFGS algorithm and the Nelder-Mead algorithm, to calculate beta hat. The beta value derived through the L-BFGS algorithm is notably closer to the actual beta value. The beta value obtained through the Nelder-Mead algorithm is significantly distant from the actual beta value. Similarly, the estimated beta in Question 8 is also close to the true beta.
+
+In my opinion, the differences between the estimated and true values are due to the random errors added to the model. T
+
+
+
+\end{document}
