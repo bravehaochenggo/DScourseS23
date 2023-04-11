@@ -1,0 +1,46 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Problem Set 9}
+\author{Haocheng Yang}
+
+\begin{document}
+\maketitle
+
+
+\section{Dimension of Training Data and Variables of Original Dataset}
+
+The training dataset contains 404 observations with 14 variables.
+
+The original housing dataset contains 14 variables with 506 observations
+
+\section{LASSO: optimal value of Lamda and RMSE }
+
+The optimal value of Lamda is 0.0676;
+The out of sample RMSE is 0.170;
+
+\section{Ridge: optimal value of Lamda and RMSE}
+The optimal value of Lamda is 0.0748;
+The out of sample RMSE is 0.173;
+
+\section{Question 10}
+
+I don't think that it is a good way to estimate using simple linear regression model on a data set that has more columns than rows. It might lead to model overfitting.
+
+Regarding the bias-variance tradeoff, a model with low bias will fit the training data well, but may overfit and perform poorly on new data.
+
+In the previous questions, we used cross-validation to tune the models and estimate their performance on new data. The optimal RMSE values obtained suggest that the Lasso model with the tuned lambda parameter strikes a good balance between bias and variance. It is able to achieve low out-of-sample RMSE without overfitting the training data.
+
+\end{document}
