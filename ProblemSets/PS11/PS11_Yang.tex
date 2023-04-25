@@ -1,0 +1,144 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Committee Member Overlap And Corporate Social Responsibility Performance}
+\author{Haocheng Yang}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The main objective of this research is to investigate whether the presence of board members who serve on both the audit committee and CSR committee can improve a firm's corporate social responsibility performance. By conducting an OLS regression analysis on a sample of 3172 firm-year observations from 583 firms listed on U.S. exchanges between 2010 and 2019, I have discovered that firms with members who serve on both the audit and CSR committees exhibit, on average, better corporate social responsibility performance than those without any overlap.
+\end{abstract}
+
+\section{Introduction}
+
+With the growing focus of firms and investors on corporate social responsibility, an increasing number of firms have voluntarily established CSR committees. CSR activities can be an effective approach for firms to do marketing and attract investment. However, firms’ CSR information might be inaccurate due to the lacking of strict oversighting party and regulators. In the US, the CSR information and activities are voluntarily disclosed and are not required to be verified. The need for ensuring the trustworthy CSR information and the truly implemented CSR activities is inclining. The establishement of CSR committee can be an effective way to alleviate the concern. According to Chu et al. (2022), firms with CSR committee, on average, have better CSR performance. Corporate social responsibility (CSR) committees are groups within firms that are in charge of creating and carrying out the organization's CSR initiatives. The purpose of CSR committees in the US is to make sure that a company's social responsibility efforts are in line with its corporate mission and core principles. The members of CSR committee are responsible for identifying and addressing the company's social and environmental issues, managing stakeholder relationships, and reporting on the company's social and environmental performance. 
+
+An audit committee's main responsibility is to make sure that a company's financial statements are correct, comprehensive, and compliant with all applicable laws and accounting standards. It is also responsible for oversighting the hiring of external auditor. The audit committee is also responsible for reviewing other aspects of corporate governance, such as risk management, internal controls, and adherence to laws and regulations, in addition to its duties relating to financial reporting. In recent years, the audit committee's function in monitoring corporate social responsibility (CSR) efforts has also been investigated, as some contend that the committee may play a vital role in promoting and monitoring CSR practices.
+
+The absence of regulations regarding the number of committees a person can be a part of has led to a phenomenon where many committee members also serve on multiple other committees. This research is to test whether the overlap between audit committee members and CSR committee members has synergy effect on firms' CSR performance
+
+\section{Literature Review}
+Studies examining the effects of committee overlap on financial reporting quality have found that greater overlap between any board committees is associated with higher quality reporting. ~\cite{faleye2011costs}Faleye et al. (2011) used broad overlap as an indicator of monitoring intensity and observed lower discretionary accruals when more than half of the independent directors on the board serve on at least two of the three primary committees: audit, compensation, and nominating committees. Chandar et al. (2012)~\cite{chandar2012does}, Habib and Bhuiyan (2016)~\cite{habib2016overlapping}, and Velte (2017)~\cite{velte2017overlapping} have also found lower discretionary accruals in S&P 500, Australian, and German firms, respectively, when there is overlap specifically between the audit and compensation committees. The studies suggest that overlap between committees can promote knowledge sharing and improve the knowledge of members who participate in multiple committees. This can lead to improved monitoring and ultimately result in higher quality financial reporting. The audit committee is responsible for the financial reporting quality. According to a study conducted by Spencer Stuart in 2007 on a sample of S&P 500 companies, the average number of meetings held by audit committees was 9.5, which was higher than any other committees. Moreover, Bedard et al. (2008) discovered that companies reporting internal control material weaknesses held a significantly greater number of audit committee meetings. A person who serve on both audit committee and CSR committee may emphasis more socially responsible activities on the company’s governance and financial reporting process.
+
+My research differs from Chu et al. (2022)~\cite{chu2022corporate}, as their study has demonstrated the positive impact of CSR committees on firms' ESG performance. In contrast, my research focuses on exploring the potential synergy effect that arises from the overlap of members between the audit and CSR committees.
+
+\section{Hypotheses Development}
+As mentioned in previous section, overlap among committee members could improve financial reporting quality and also employ a non-performance-related incentives for management. It can be reasonably inferred that the overlap between audit committee member and CSR committee member could improve firms' CSR performance. 
+
+H1: Firms with the overlap of members between the audit and CSR committees have more better ESG performance than these without overlap. 
+
+H2: Firms with the overlap of members between the audit and CSR committees have more better internal CSR performance than these without overlap.
+
+\section{Empirical Method}
+Consistent with prior research, I employ an OLS regression model in my study. My model includes eight dependent variables, namely "strength", "concern", "env", "social", "esgscore", "external", "internal", and "gap". All of these variables are relevant to firms' CSR performance. The "strength" variable measures a firm's overall CSR advantages, with a minimum score, “0”, indicating no advantage. The higher the score, the greater the advantage the firm has. The "concern" variable measures a firm’s overall CSR disadvantages, with a minimum score, “0”, indicating great advantage. The higher the score, the greater the disadvantage the firm has. The “env” variable measures firms’ overall environmental performance, the higher the score, the better the performance. The “social” variable measures firms’ overall social performance. The “esgscore” measures firms’ comprehensive environment, social and governance performance. The “internal” variable measures firms’ internal CSR performance, the “external” variable measures firms’ external CSR performance, and the “gap” is the difference between “external” and “internal” measuring whether the firms are animus et factum.
+
+The independent variable of interest is an indicator variable, Bothcoin, which is equals to “1” if a firm has overlap between audit committee member and CSR committee members and “0” if the firm’s CSR committee member has no overlap with audit committee members. Independent variables also includes a vector of control variables which are “boardsize”, “number of committees”, “audit committee size”, and “CSR committee size”. (I will include more necessarily relevant control variables in final report)
+
+\begin{equation}
+CSRPerfom = Bothcoin + BoardSize + CommitteeCount + AuditCommitteeSize + CSRCommitteeSize
+
++ Firm\ Fixed\ Effects + Year\ Fixed\ Effects
+\end{equation}
+
+\section{Sample}
+For committee and overlap data, I extracted the director-level information the from BoardEX database. For CSR performance data, I utilized the KLD database calculating the firms’ CSR rating. My sample period spans from 2010 to 2019 in order to tease out the effects of financial crisis and Covid-19 pandemic. I first use director-level data to generate the main independent variable of interest, namely Bothcoin and also the four control variables. Second, I utilized KLD database to generate the eight dependent variables. Then, I merged the two cleaned datasets in terms of ticker (an unique firm identifier). After excluding missing values, my final sample contains 3172 firm-year observations in which 490 firms have no overlap and 2679 firms have overlap. Because CSR committee is not mandatory by regulation, the number of firms with CSR committee is low. As we can see from figure 9, the number of CSR committees is increasing each year.
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{number.png}
+\caption{\label{fig:Number} Figure 1 shows the number of CSR committee.}
+\end{figure}
+
+\section{Main Results}
+since this study had eight dependent variables. And the eight factors assess many aspects of a company's CSR performance, which aids in our comprehension of how overlap affects all of a company's viewpoints.
+First, I regress Overall CSR performance, namely “esgscore”, on the independent variable of interest and other control variables. I find that the coefficient of “Bothcoin” is positively correlated with esgscore (please see table 1). The result is consistent with my expectation that firms with the overlap between CSR committee and audit committee have better CSR performance. The regression is also controlled for firm fixed effects and year fixed effects. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{esg_score.png}
+\caption{\label{fig:ESGscore} Figure 2 includes the main regression results on ESG score.}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{strength.png}
+\caption{\label{fig:strength} Figure 3 includes the main regression results on strength.}
+\end{figure}
+Second, Figure 2 presents the regression result for the second dependent variable, strength, which shows that the coefficient of Bothcoin is not significant. I do not find evidence that the overlap is correlated with the overall CSR strength of a firm. However, the coefficient of BoardSize is significant, which means that the larger the board size, the greater the strength a firm has.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{concern.png}
+\caption{\label{fig:Concern} Figure 4 includes the regression results on Concern.}
+\end{figure}
+
+Figure 3 presents the regression result for the third dependent variable, concern, which measures the overall CSR-related threat and risk of a firm. The figure shows  the coefficient of Bothcoin is negatively significant suggesting that the firms with overlap between audit committee members and CSR committee members tend to face lower CSR risk. And the boardsize is also correlated with the firms' concern. 
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{env.png}
+\caption{\label{fig:env} Figure 5 includes the regression results on env.}
+\end{figure}
+Figure 4 presents the regression result for the fourth dependent variable, env, which measures the overall environment-related performance of a firm. The figure shows  the coefficient of Bothcoin is not significant suggesting that the firms with overlap between audit committee members and CSR committee members have no obvious change in environment performance. 
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{social.png}
+\caption{\label{fig:env} Figure 6 includes the regression results on social.}
+\end{figure}
+
+Figure 5 shows that the coefficient of Bothcoin is positively significant. This indicates that firms with overlap have better social performance than those without the overlap.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{external.png}
+\caption{\label{fig:external} Figure 7 includes the regression results on external.}
+\end{figure}
+
+Figure 6 presents the regression result for external performance, the variable measures whether the firms performs good when dealing with all external CSR issues. As we can see, the coefficient of external is not significant, which means that the firms with overlap have no clearly better performance than those without overlap.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{internal.png}
+\caption{\label{fig:internal} Figure 8 includes the regression results on internal.}
+\end{figure}
+
+Figure 7 presents the regression result for internal performance, the variable measures whether the firms performs good when dealing with all internal CSR issues, for example, employee benefits and welfare. As we can see, the coefficient of external is positively significant, which means that the firms with overlap have clearly better performance than those without overlap.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{gap.png}
+\caption{\label{fig:gap} Figure 9 includes the regression results on gap.}
+\end{figure}
+
+Figure 8 presents the regression result for gap performance, the variable measures whether the firms perform better in addressing both internal and external CSR issues. Some firms might only do a better job in addressing external CSR issues because external CSR can serve as a marketing tool.  As we can see, the coefficient of gap is negatively significant, which means that the firms with overlap have clearly better performance on both external and internal CSR issues than those without overlap.
+
+
+
+\section{Conclusion}
+
+The test in this study has shown that firms with overlap between audit committee members and CSR committee members have a better CSR performance than those without the overlap. Audit committee is a function that oversight the operation and financial reporting process of a firm, the overlap elicit a knowledge sharing between the two committees, the overlapped members might put more emphasis on a firm's CSR activities and also embed CSR importance in the firm's operation and reporting process.
+
+
+
+\bibliographystyle{plain}
+\bibliography{PS11_Yang}
+
+\end{document}
